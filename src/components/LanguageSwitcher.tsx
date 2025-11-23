@@ -17,8 +17,7 @@ export default function LanguageSwitcher() {
   const currentLang = languages.find(lang => pathname.startsWith(`/${lang.code}`)) || languages[0];
 
   const switchLanguage = (langCode: string) => {
-    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${langCode}`);
-    router.push(newPath);
+    alert(`Language switching to ${langCode.toUpperCase()} is not implemented yet. The app is currently in English.`);
     setIsOpen(false);
   };
 

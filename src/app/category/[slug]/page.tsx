@@ -28,8 +28,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   const categoryName = categoryMap[slug] || slug.charAt(0).toUpperCase() + slug.slice(1);
 
+  // Load listings from localStorage
+  const storedListings = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('listings') || '[]') : [];
+
   // Fake data for listings - filter by category
-  const allListings = [
+  const fakeListings = [
     {
       id: '1',
       title: 'iPhone 13 Pro Max - Like New',
@@ -139,6 +142,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       isNew: true,
     },
   ];
+
+  // Combine stored and fake listings
+  const allListings = [...storedListings, ...fakeListings];
 
   const filteredListings = allListings.filter(listing =>
     listing.category.toLowerCase() === categoryName.toLowerCase()

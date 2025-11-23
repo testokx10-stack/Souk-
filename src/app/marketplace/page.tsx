@@ -5,8 +5,11 @@ import FiltersBar from '@/components/FiltersBar';
 import FloatingSellButton from '@/components/FloatingSellButton';
 
 export default function MarketplacePage() {
+  // Load listings from localStorage
+  const storedListings = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('listings') || '[]') : [];
+
   // Fake data for listings
-  const listings = [
+  const fakeListings = [
     {
       id: '1',
       title: 'iPhone 13 Pro Max - Like New',
@@ -62,6 +65,9 @@ export default function MarketplacePage() {
       isNew: false,
     },
   ];
+
+  // Combine stored and fake listings
+  const listings = [...storedListings, ...fakeListings];
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
