@@ -5,15 +5,17 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import FloatingSellButton from '@/components/FloatingSellButton';
 
 interface ListingPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ListingPage({ params }: ListingPageProps) {
+export default async function ListingPage({ params }: ListingPageProps) {
+  const { id } = await params;
+
   // Fake data - in real app, fetch from API
   const listing = {
-    id: params.id,
+    id: id,
     title: 'iPhone 13 Pro Max - Like New Condition',
     price: 8500,
     location: 'Casablanca, Morocco',
