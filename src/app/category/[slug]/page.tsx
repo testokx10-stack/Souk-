@@ -6,13 +6,13 @@ import FloatingSellButton from '@/components/FloatingSellButton';
 import Link from 'next/link';
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const { slug } = params;
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = await params;
 
   // Map slug to category name
   const categoryMap: { [key: string]: string } = {
