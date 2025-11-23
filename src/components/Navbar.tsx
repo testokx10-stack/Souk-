@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SouqPlusLogo from './SouqPlusLogo';
 import SearchBar from './SearchBar';
 import DarkModeToggle from './DarkModeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar: React.FC = () => {
   return (
@@ -17,13 +18,13 @@ const Navbar: React.FC = () => {
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              L’3ard
+              Home
             </Link>
-            <Link href="/categories" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Fina
+            <Link href="/marketplace" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Categories
             </Link>
             <Link href="/sell" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Bda Tbi3
+              Sell
             </Link>
           </div>
 
@@ -34,12 +35,13 @@ const Navbar: React.FC = () => {
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
             <DarkModeToggle />
             <Link href="/login" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Dkhl
+              Login
             </Link>
             <Link href="/register" className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-              Sjl
+              Register
             </Link>
           </div>
         </div>
