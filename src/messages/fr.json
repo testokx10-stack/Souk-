@@ -1,0 +1,46 @@
+{
+  "home": {
+    "title": "Souq+ — Acheter et Vendre",
+    "subtitle": "Au Maroc, tout. Achetez et vendez sans tracas.",
+    "sellButton": "Commencer à Vendre",
+    "shopButton": "Acheter Ici",
+    "categoriesTitle": "Catégories",
+    "whyTitle": "Pourquoi Souq+?",
+    "whyFast": "Rapide & Facile",
+    "whyFastDesc": "Publiez votre annonce en minutes et atteignez des milliers d'acheteurs instantanément.",
+    "whySecure": "Sécurisé",
+    "whySecureDesc": "Transactions sûres avec des utilisateurs vérifiés et des options de paiement sécurisées.",
+    "whyLocal": "Focus Local",
+    "whyLocalDesc": "Connectez-vous avec des acheteurs et vendeurs dans votre ville pour de meilleures offres.",
+    "testimonialsTitle": "Ce que Disent Nos Utilisateurs"
+  },
+  "categories": {
+    "cars": "Voitures",
+    "phones": "Téléphones",
+    "electronics": "Électronique",
+    "homes": "Maisons",
+    "furniture": "Meubles",
+    "services": "Services",
+    "fashion": "Mode",
+    "jobs": "Emplois"
+  },
+  "search": {
+    "placeholder": "Rechercher quelque chose..."
+  },
+  "marketplace": {
+    "title": "Marché",
+    "trending": "Les Plus Vus dans Votre Ville",
+    "allListings": "Toutes les Annonces",
+    "loadMore": "Charger Plus d'Annonces"
+  },
+  "category": {
+    "backToMarketplace": "Retour au Marché",
+    "listings": "Annonces"
+  },
+  "listing": {
+    "description": "Description",
+    "sellerInfo": "Informations sur le Vendeur",
+    "rating": "évaluation",
+    "copyLink": "Copier le Lien"
+  }
+}

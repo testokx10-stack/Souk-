@@ -1,0 +1,46 @@
+{
+  "home": {
+    "title": "Souq+ — Buy and Sell",
+    "subtitle": "In Morocco, everything. Buy and sell without hassle.",
+    "sellButton": "Start Selling",
+    "shopButton": "Shop Here",
+    "categoriesTitle": "Categories",
+    "whyTitle": "Why Souq+?",
+    "whyFast": "Fast & Easy",
+    "whyFastDesc": "Post your listing in minutes and reach thousands of buyers instantly.",
+    "whySecure": "Secure",
+    "whySecureDesc": "Safe transactions with verified users and secure payment options.",
+    "whyLocal": "Local Focus",
+    "whyLocalDesc": "Connect with buyers and sellers in your city for better deals.",
+    "testimonialsTitle": "What Our Users Say"
+  },
+  "categories": {
+    "cars": "Cars",
+    "phones": "Phones",
+    "electronics": "Electronics",
+    "homes": "Homes",
+    "furniture": "Furniture",
+    "services": "Services",
+    "fashion": "Fashion",
+    "jobs": "Jobs"
+  },
+  "search": {
+    "placeholder": "Search for something..."
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "trending": "Most Viewed in Your City",
+    "allListings": "All Listings",
+    "loadMore": "Load More Listings"
+  },
+  "category": {
+    "backToMarketplace": "Back to Marketplace",
+    "listings": "Listings"
+  },
+  "listing": {
+    "description": "Description",
+    "sellerInfo": "Seller Information",
+    "rating": "rating",
+    "copyLink": "Copy Link"
+  }
+}

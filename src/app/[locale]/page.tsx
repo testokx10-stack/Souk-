@@ -3,17 +3,27 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CategoryCard from '@/components/CategoryCard';
 import FloatingSellButton from '@/components/FloatingSellButton';
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+interface HomePageProps {
+  params: Promise<{
+    locale: string;
+  }>;
+}
+
+export default async function Home({ params }: HomePageProps) {
+  const { locale } = await params;
+  const t = await getTranslations('home');
+
   const categories = [
-    { name: 'Cars', icon: '🚗', count: 1250, href: '/category/cars' },
-    { name: 'Phones', icon: '📱', count: 890, href: '/category/phones' },
-    { name: 'Electronics', icon: '💻', count: 650, href: '/category/electronics' },
-    { name: 'Homes', icon: '🏠', count: 420, href: '/category/homes' },
-    { name: 'Furniture', icon: '🛋️', count: 380, href: '/category/furniture' },
-    { name: 'Services', icon: '🛠️', count: 290, href: '/category/services' },
-    { name: 'Fashion', icon: '👗', count: 550, href: '/category/fashion' },
-    { name: 'Jobs', icon: '💼', count: 180, href: '/category/jobs' },
+    { name: t('categories.cars'), icon: '🚗', count: 1250, href: '/category/cars' },
+    { name: t('categories.phones'), icon: '📱', count: 890, href: '/category/phones' },
+    { name: t('categories.electronics'), icon: '💻', count: 650, href: '/category/electronics' },
+    { name: t('categories.homes'), icon: '🏠', count: 420, href: '/category/homes' },
+    { name: t('categories.furniture'), icon: '🛋️', count: 380, href: '/category/furniture' },
+    { name: t('categories.services'), icon: '🛠️', count: 290, href: '/category/services' },
+    { name: t('categories.fashion'), icon: '👗', count: 550, href: '/category/fashion' },
+    { name: t('categories.jobs'), icon: '💼', count: 180, href: '/category/jobs' },
   ];
 
   const testimonials = [
@@ -58,23 +68,23 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Souq+ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-blue-500">Buy and Sell</span>
+            {t('title')}
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Everything in Morocco. Buy and sell without hassle.
+            {t('subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/sell"
               className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Start Selling
+              {t('sellButton')}
             </Link>
             <Link
               href="/marketplace"
               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-gray-300 dark:border-gray-600 hover:border-orange-500 transition-all duration-300"
             >
-              Shop Here
+              {t('shopButton')}
             </Link>
           </div>
         </div>
@@ -84,7 +94,7 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            L’3ard
+            {t('categoriesTitle')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {categories.map((category) => (
@@ -98,29 +108,29 @@ export default function Home() {
       <section className="py-16 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Why Souq+?
+            {t('whyTitle')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fast & Easy</h3>
-              <p className="text-gray-600 dark:text-gray-300">Post your listing in minutes and reach thousands of buyers instantly.</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('whyFast')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{t('whyFastDesc')}</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔒</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Secure</h3>
-              <p className="text-gray-600 dark:text-gray-300">Safe transactions with verified users and secure payment options.</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('whySecure')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{t('whySecureDesc')}</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌍</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Local Focus</h3>
-              <p className="text-gray-600 dark:text-gray-300">Connect with buyers and sellers in your city for better deals.</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('whyLocal')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{t('whyLocalDesc')}</p>
             </div>
           </div>
         </div>
@@ -130,7 +140,7 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            What Our Users Say
+            {t('testimonialsTitle')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (

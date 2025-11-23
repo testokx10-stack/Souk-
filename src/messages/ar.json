@@ -1,0 +1,46 @@
+{
+  "home": {
+    "title": "سوق+ — اشترِ وبِع",
+    "subtitle": "في المغرب، كل شيء. اشترِ وبِع بدون متاعب.",
+    "sellButton": "ابدأ البيع",
+    "shopButton": "تسوق هنا",
+    "categoriesTitle": "الفئات",
+    "whyTitle": "لماذا سوق+؟",
+    "whyFast": "سريع وسهل",
+    "whyFastDesc": "انشر إعلانك في دقائق ووصل إلى آلاف المشترين فوراً.",
+    "whySecure": "آمن",
+    "whySecureDesc": "معاملات آمنة مع مستخدمين موثقين وخيارات دفع آمنة.",
+    "whyLocal": "تركيز محلي",
+    "whyLocalDesc": "تواصل مع المشترين والبائعين في مدينتك للحصول على صفقات أفضل.",
+    "testimonialsTitle": "ماذا يقول مستخدمونا"
+  },
+  "categories": {
+    "cars": "سيارات",
+    "phones": "هواتف",
+    "electronics": "إلكترونيات",
+    "homes": "منازل",
+    "furniture": "أثاث",
+    "services": "خدمات",
+    "fashion": "أزياء",
+    "jobs": "وظائف"
+  },
+  "search": {
+    "placeholder": "ابحث عن شيء..."
+  },
+  "marketplace": {
+    "title": "السوق",
+    "trending": "الأكثر مشاهدة في مدينتك",
+    "allListings": "جميع الإعلانات",
+    "loadMore": "تحميل المزيد من الإعلانات"
+  },
+  "category": {
+    "backToMarketplace": "العودة إلى السوق",
+    "listings": "الإعلانات"
+  },
+  "listing": {
+    "description": "الوصف",
+    "sellerInfo": "معلومات البائع",
+    "rating": "تقييم",
+    "copyLink": "نسخ الرابط"
+  }
+}
